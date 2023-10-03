@@ -1,0 +1,33 @@
+.navBar {
+  background-color: rgba(23, 23, 23, 0.974);
+  color: white;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.logoImage {
+  margin: 5px 10px;
+  width: 2%;
+}
+.logoImage img {
+  width: 100%;
+}
+.navBtnContainer {
+  display: inline;
+}
+.navBtnContainer li {
+  display: inline;
+  margin: 0px 10px;
+}
+.navBtnContainer li a {
+  color: white;
+  text-decoration: none;
+}
+.navBtnContainer li a:hover {
+  text-decoration: underline;
+  text-decoration-line: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 0.5px;
+}
