@@ -8,9 +8,12 @@
   letter-spacing: 1px;
   color: inherit;
   cursor: pointer;
-  background-color: rgb(255, 64, 64);
+  background: linear-gradient(90deg, #ff002f 30%, transparent) #c90d29ac;
+  transition: background-color 1s;
 }
-.btn:hover {
-  background-color: rgb(19, 19, 19);
-  color: rgb(231, 231, 231);
+
+.btn:hover,
+.btn:focus {
+  background-color: #e64646;
+  color: #fff;
 }
