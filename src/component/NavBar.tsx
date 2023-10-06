@@ -1,5 +1,6 @@
 import React from "react";
 import cls from "./NavBar.module.css";
+import { Link } from "react-router-dom";
 export default function NavBar() {
   return (
     <div className={cls.navBar}>
@@ -8,16 +9,16 @@ export default function NavBar() {
       </div>
       <ul className={cls.navBtnContainer}>
         <li>
-          <a href="">Movies</a>
+          <Link to="">Movies</Link>
         </li>
         <li>
-          <a href="">TV shows</a>
+          <Link to="">TV shows</Link>
         </li>
         <li>
-          <a href="">Trending</a>
+          <Link to="">Trending</Link>
         </li>
         <li>
-          <a href="">Pricing</a>
+          <Link to="">Pricing</Link>
         </li>
       </ul>
     </div>

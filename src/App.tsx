@@ -5,15 +5,19 @@ import Home from "./component/Home/Home";
 import PrivateRoute from "./component/PrivateRoute/PrivateRoute";
 import PageNotFound from "./component/PageNotFound";
 
+import Login from "./component/Auth/Login";
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route element={<PrivateRoute />}>
-            <Route path="/home" element={<Home />} />
+            <Route path="home" element={<Home />} />
           </Route>
-          <Route path="/" element={<Welcome />} />
+          <Route path="/" element={<Welcome />}>
+            <Route path="login" element={<Login />} />
+          </Route>
           <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
       </BrowserRouter>

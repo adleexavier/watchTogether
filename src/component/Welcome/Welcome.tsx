@@ -4,9 +4,10 @@ import { useState } from "react";
 import Login from "../Auth/Login";
 import Modal from "../Reusable/Modal";
 import Gallery from "./Gallery";
-export default function Welcome() {
-  const [loginMdl, setLoginMdl] = useState(false);
+import { Outlet, useNavigate } from "react-router-dom";
 
+export default function Welcome() {
+  const navigate = useNavigate();
   return (
     <div className={cls.welocmeContainer}>
       <div>
@@ -16,14 +17,10 @@ export default function Welcome() {
         <h4 className={`${cls.heading2} ${cls.text}`}>
           Watch virtually with your friends.
         </h4>
-        <UiBtn1 onClick={() => setLoginMdl(true)} value="Get Started" />
+        <UiBtn1 onClick={() => navigate("/login/")} value="Get Started" />
       </div>
       <Gallery></Gallery>
-      {loginMdl && (
-        <Modal closeMdl={setLoginMdl}>
-          <Login></Login>
-        </Modal>
-      )}
+      <Outlet></Outlet>
     </div>
   );
 }
