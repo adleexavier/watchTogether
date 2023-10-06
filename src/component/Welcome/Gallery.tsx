@@ -6,16 +6,16 @@ export default function Gallery() {
     <div className={cls.container}>
       <div className={cls.slider}>
         <ul className={cls.list}>
-          {moviApi.map((item: string) => (
+          {moviApi.map((item: string, i: number) => (
             <li>
-              <TVmodal src={item}></TVmodal>
+              <TVmodal key={i} src={item}></TVmodal>
             </li>
           ))}
         </ul>
         <ul className={cls.list}>
-          {moviApi.map((item: string) => (
+          {moviApi.map((item: string, i: number) => (
             <li>
-              <TVmodal src={item}></TVmodal>
+              <TVmodal key={i + 20} src={item}></TVmodal>
             </li>
           ))}
         </ul>
