@@ -1,11 +1,10 @@
-import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Welcome from "./component/Welcome/Welcome";
 import PrivateRoute from "./component/PrivateRoute/PrivateRoute";
 import PageNotFound from "./component/PageNotFound";
 import Login from "./component/Auth/Login";
 import { Suspense, lazy } from "react";
-import Loading from "./ui/Loading";
+import { Loading } from "./ui/Loading";
 const Home = lazy(() => import("./component/Home/Home"));
 function App() {
   return (

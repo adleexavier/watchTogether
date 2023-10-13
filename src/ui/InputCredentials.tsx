@@ -1,9 +1,8 @@
 import { useRef, useState, useEffect } from "react";
 import ProfileSvg from "../assets/Svg/ProfileSvg";
 import PwdSvg from "../assets/Svg/PwdSvg";
-import cls from "./InputCredential.module.css";
 
-interface propsType {
+interface InputPropsType {
   type: "mail" | "user" | "pwd";
   sendDataToLogin: React.Dispatch<
     React.SetStateAction<{
@@ -13,7 +12,7 @@ interface propsType {
   >;
 }
 
-export default function InputCredentials(props: propsType) {
+export default function InputCredentials(props: InputPropsType) {
   const [active, setActive] = useState(false);
   const [isFocus, setFocus] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -38,23 +37,25 @@ export default function InputCredentials(props: propsType) {
 
   return (
     <div
-      className={cls.inputCredential}
+      className="box-border relative flex bg-bl1 px-[4px] py-[3px] rounded-md mt-4"
       onFocus={() => setFocus(true)}
       onBlur={() => setFocus(false)}
     >
       <div
-        className={`${active ? cls.active : cls.notActive} ${cls.svgContainer}`}
+        className={`${
+          active ? "-translate-x-12" : "translate-x-0"
+        } absolute top-[5px] transition-all duration-700`}
       >
         {props.type === "user" && <ProfileSvg active={active} />}
         {props.type === "pwd" && <PwdSvg active={active} />}
       </div>
 
       <input
-        className={cls.inputText}
+        size={14}
+        className="outline-none p-2 text-white text-2xl bg-inherit min-w-0"
         type={props.type === "pwd" ? "password" : "text"}
         ref={inputRef}
       />
-      <span className={`${cls.borderFiller} ${active && cls.bFActive}`}></span>
     </div>
   );
 }

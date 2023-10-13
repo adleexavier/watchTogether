@@ -1,4 +1,3 @@
-import classes from "./Login.module.css";
 import InputCredentials from "../../ui/InputCredentials";
 import UiBtn1 from "../../ui/UiBtn1";
 import { useState } from "react";
@@ -18,11 +17,12 @@ export default function Login() {
   };
   return (
     <Modal>
-      <div className={classes.loginContainer}>
-        <h3>Welcome</h3>
-        <img src="/logo.png" className={classes.logo} alt="" />
+      <div className="max-w-lg text-white flex flex-col gap-[10px] rounded-2xl justify-center items-center bg-bl2 px-4 py-12 shadow-2xl ">
+        <h3 className=" text-3xl">Login</h3>
+        <img src="/logo.png" className="w-1/3" alt="" />
         <InputCredentials type="user" sendDataToLogin={setLoginCredentials} />
         <InputCredentials type="pwd" sendDataToLogin={setLoginCredentials} />
+        <br />
         <UiBtn1 value="Join" onClick={sendCredential} />
       </div>
     </Modal>
