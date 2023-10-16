@@ -1,6 +1,19 @@
+import { useEffect, useState } from "react";
 import TVmodal from "../../ui/miniModals/TVmodal";
-import { moviApi } from "./fetchMovies";
 export default function Gallery() {
+  const [moviApi, setData] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/featured")
+      .then((data) => {
+        return data.json();
+      })
+      .then((data) => {
+        setData(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [setData]);
   return (
     <div className="w-full h-[400px] overflow-hidden relative overlay">
       <div className="animate-scrollGal">

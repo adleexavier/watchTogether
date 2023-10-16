@@ -1,11 +1,13 @@
 import React from "react";
 import NavBar from "../NavBar";
-
+import Trending from "./Trending";
+import Featured from "./Featured";
 export default function Home() {
   return (
-    <div>
+    <div className="w-full h-screen">
       <NavBar></NavBar>
-      <h1> #Trending </h1>
+      <Featured />
+      <Trending></Trending>
     </div>
   );
 }

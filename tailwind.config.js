@@ -9,8 +9,14 @@ export default {
         bl2: " #4d4d4d8a",
         btn1: "rgb(255, 64, 64)",
       },
+      gridTemplateColumns: {
+        gall: "0.7fr 0.3fr",
+      },
       backgroundImage: {
         gra1: "radial-gradient(circle,rgba(0, 0, 0, 0.1) 10%,rgba(0, 0, 0, 0.8) 100%)",
+        wl: "radial-gradient(circle,rgba(0, 0, 0, 0.55) 0%,rgba(0, 0, 0, 0.55) 100%), url('/welcome.jpg')",
+        featured:
+          "url('https://akm-img-a-in.tosshub.com/indiatoday/images/media_bank/202309/thalapathy-vijay-leo-tamil-poster-out-203320658-16x9.jpg?VersionId=be5LnvEqRvSA8OfSA8xD15TN_mLDkF0p')",
       },
       animation: {
         ring1: "rotate1 linear infinite 1s",

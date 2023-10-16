@@ -1,20 +1,16 @@
-import cls from "./Welcome.module.css";
 import UiBtn1 from "../../ui/UiBtn1";
-import { useState } from "react";
-import Login from "../Auth/Login";
-import Modal from "../Reusable/Modal";
 import Gallery from "./Gallery";
 import { Outlet, useNavigate } from "react-router-dom";
 
 export default function Welcome() {
   const navigate = useNavigate();
   return (
-    <div className={cls.welocmeContainer}>
+    <div className="h-screen w-screen px-40 text-white bg-wl bg-no-repeat bg-center bg-cover grid grid-cols-gall justify-between items-center ">
       <div>
-        <h1 className={`${cls.heading} ${cls.text}`}>
+        <h1 className="text-[55px] font-bold my-12 leading-[60px]">
           Enjoy your <br /> Favorite shows & Films <br /> with your dear ones
         </h1>
-        <h4 className={`${cls.heading2} ${cls.text}`}>
+        <h4 className="text-[25px] leading[30px] font-semibold my-12">
           Watch virtually with your friends.
         </h4>
         <UiBtn1 onClick={() => navigate("/login/")} value="Get Started" />
